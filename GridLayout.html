@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Responsive Grid</title>
+  <style>
+    :root{--gap:16px}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,Segoe UI,Roboto,Arial, sans-serif;margin:20px;background:#f7f7f7;color:#111}
+
+ 
+    .grid{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+
+    .card{background:#fff;padding:16px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.08);min-height:120px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+
+    h1{font-size:1.25rem;text-align:center;margin:0 0 18px}
+    small{opacity:.7}
+
+    /* smaller gap on very small screens */
+    @media (max-width:420px){:root{--gap:12px}}
+  </style>
+</head>
+<body>
+  <h1>Responsive Grid</h1>
+  <div class="grid">
+    <div class="card"><br><small></small>SHIRT $ 2.9</div>
+    <div class="card"><br><small></small>TSHIRT $ 3.1</div>
+    <div class="card"><br><small>WATCH $4.9</small></div>
+    <div class="card"><br><small></small>SHOES $ 6.9</div>
+    </body>
+</html>
